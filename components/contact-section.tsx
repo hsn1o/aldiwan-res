@@ -112,31 +112,6 @@ export function ContactSection({ address, phone, whatsapp, hours, email, social,
               </CardContent>
             </Card>
 
-            {/* {email && (
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-restaurant-primary/10 rounded-lg flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-restaurant-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-restaurant-primary mb-2">البريد الإلكتروني</h3>
-                      <p className="text-gray-600 mb-2" dir="ltr">
-                        {email}
-                      </p>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="border-restaurant-primary text-restaurant-primary hover:bg-restaurant-primary hover:text-white bg-transparent"
-                        asChild
-                      >
-                        <a href={`mailto:${email}`}>أرسل رسالة</a>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )} */}
           </div>
 
           {mapEmbedUrl && (
