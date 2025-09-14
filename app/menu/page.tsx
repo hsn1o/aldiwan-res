@@ -1,23 +1,25 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Navigation } from "@/components/navigation"
-import { CategoryTabs } from "@/components/category-tabs"
-import { ProductGrid } from "@/components/product-grid"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { restaurantData } from "@/lib/restaurant-data"
+import { useState } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Navigation } from "@/components/navigation";
+import { CategoryTabs } from "@/components/category-tabs";
+import { ProductGrid } from "@/components/product-grid";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { restaurantData } from "@/lib/restaurant-data";
 
 export default function MenuPage() {
-  const { restaurant, menu } = restaurantData
-  const [selectedCategory, setSelectedCategory] = useState(menu.categories[0].id)
+  const { restaurant, menu } = restaurantData;
+  const [selectedCategory, setSelectedCategory] = useState(
+    menu.categories[0].id
+  );
 
-  const selectedProducts = menu.products[selectedCategory] || []
+  const selectedProducts = menu.products[selectedCategory] || [];
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-restaurant-secondary">
       <Navigation restaurantName={restaurant.name} />
 
       {/* Header Section */}
@@ -26,7 +28,10 @@ export default function MenuPage() {
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Button variant="ghost" size="sm" asChild>
-                <Link href="/" className="text-restaurant-primary hover:text-restaurant-primary/80">
+                <Link
+                  href="/"
+                  className="text-restaurant-primary hover:text-restaurant-primary/80"
+                >
                   <ArrowRight className="w-4 h-4 ml-1" />
                   العودة للرئيسية
                 </Link>
@@ -37,7 +42,8 @@ export default function MenuPage() {
               قائمة طعام مطعم الديوان
             </h1>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              اكتشف مجموعة متنوعة من الأطباق اليمنية الأصيلة المحضرة بأجود المكونات وأصالة الطعم اليمني العريق
+              اكتشف مجموعة متنوعة من الأطباق اليمنية الأصيلة المحضرة بأجود
+              المكونات وأصالة الطعم اليمني العريق
             </p>
           </div>
 
@@ -65,10 +71,18 @@ export default function MenuPage() {
       {/* Call to Action */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-restaurant-primary mb-4">جاهز لتجربة أطباقنا الشهية؟</h2>
-          <p className="text-gray-600 text-lg mb-8 leading-relaxed">احجز طاولتك الآن أو اتصل بنا لطلب التوصيل</p>
+          <h2 className="text-3xl font-bold text-restaurant-primary mb-4 ">
+            جاهز لتجربة أطباقنا الشهية؟
+          </h2>
+          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            احجز طاولتك الآن أو اتصل بنا لطلب التوصيل
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-restaurant-primary hover:bg-restaurant-primary/90 text-white px-8" asChild>
+            <Button
+              size="lg"
+              className="bg-restaurant-primary hover:bg-restaurant-primary/90 text-white px-8"
+              asChild
+            >
               <Link href="/#contact">احجز طاولة</Link>
             </Button>
             <Button
@@ -78,7 +92,10 @@ export default function MenuPage() {
               asChild
             >
               <a
-                href={`https://wa.me/${restaurantData.home.contact.whatsapp.replace(/[^0-9]/g, "")}`}
+                href={`https://wa.me/${restaurantData.home.contact.whatsapp.replace(
+                  /[^0-9]/g,
+                  ""
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -91,5 +108,5 @@ export default function MenuPage() {
 
       <Footer restaurantName={restaurant.name} tagline={restaurant.tagline} />
     </main>
-  )
+  );
 }

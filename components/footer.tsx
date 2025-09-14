@@ -12,7 +12,7 @@ export function Footer({ restaurantName, tagline }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 text-white" dir="rtl">
+    <footer className=" text-white" dir="rtl">
       <div className="bg-[var(--restaurant-primary)] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-right">
