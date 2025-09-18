@@ -91,37 +91,45 @@ export function Footer({ restaurantName, tagline }: FooterProps) {
             <div dir="rtl" className="text-right">
               <h4 className="font-semibold mb-3">معلومات التواصل</h4>
               <ul className="space-y-3 text-white/90">
+                {/* العنوان */}
                 <li className="flex flex-row-reverse items-center gap-2 justify-end">
-                  <span>صنعاء، اليمن</span>
+                  <span className="max-w-[42ch]">
+                    إب، جولة العدين – طريق صنعاء تعز – جوار فندق وأجنحة تاج
+                    اليمن
+                    <span className="block">مقابل لخلف الصامت للصرافة</span>
+                  </span>
                   <MapPin className="w-5 h-5 opacity-80" />
                 </li>
 
+                {/* الأرقام كقائمة */}
                 <li className="flex flex-row-reverse items-center gap-2 justify-end">
                   <a
-                    href="tel:+967000000000"
+                    href="tel:+967783333011"
                     className="hover:opacity-90 transition-colors"
                   >
-                    <bdi dir="ltr">+967 000 000 000</bdi>
+                    <bdi dir="ltr">+967 783 333 011</bdi>
                   </a>
                   <Phone className="w-5 h-5 opacity-80" />
                 </li>
 
-                <li className="flex flex-row-reverse items-center gap-2 justify-end">  
-                  <span>
-                    يومياً <bdi dir="ltr">10</bdi> صباحاً –{" "}
-                    <bdi dir="ltr">12</bdi> منتصف الليل
-                  </span>
-                  <Clock className="w-5 h-5 opacity-80" />
+                <li className="flex flex-row-reverse items-center gap-2 justify-end">
+                  <a
+                    href="tel:+967739333011"
+                    className="hover:opacity-90 transition-colors"
+                  >
+                    <bdi dir="ltr">+967 739 333 011</bdi>
+                  </a>
+                  <Phone className="w-5 h-5 opacity-80" />
                 </li>
 
                 <li className="flex flex-row-reverse items-center gap-2 justify-end">
                   <a
-                    href="mailto:info@example.com"
+                    href="tel:+9674451933"
                     className="hover:opacity-90 transition-colors"
                   >
-                    <bdi dir="ltr">info@example.com</bdi>
+                    <bdi dir="ltr">+967 4 451 933</bdi>
                   </a>
-                  <Mail className="w-5 h-5 opacity-80" />
+                  <Phone className="w-5 h-5 opacity-80" />
                 </li>
               </ul>
             </div>
